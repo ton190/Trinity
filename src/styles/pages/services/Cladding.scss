@@ -1,0 +1,12 @@
+@use '../../basic/' as *;
+@use '../page_base';
+
+.Cladding{
+    display: grid;
+    .page_head {
+        background: url("../../../pics/cladding_1.jpg");
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
+    }
+}

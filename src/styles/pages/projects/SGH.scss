@@ -1,0 +1,13 @@
+@use '../../basic/' as *;
+@use 'projects_base';
+
+.SGH {
+    display: grid;
+    background: url("../../../pics/sgh.jpeg");
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+}
+
+
+

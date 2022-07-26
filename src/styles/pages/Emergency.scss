@@ -1,0 +1,16 @@
+@use '../basic/' as *;
+@use 'page_base';
+
+.Emergency {
+    display: grid;
+    .page_head {
+        background: url("../../pics/emergency.jpg");
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
+    }
+
+    .container {
+        display: grid;
+    }
+}

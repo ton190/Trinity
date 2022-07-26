@@ -1,0 +1,50 @@
+@use '../basic/' as *;
+@use 'page_base';
+
+.HealthSafty {
+    .page_body {
+        max-width: 1100px;
+    }
+    display: grid;
+    .page_head {
+        background: url("../../pics/safty.jpg");
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
+    }
+
+    .container {
+        display: grid;
+        gap: pg(600);
+
+        .box {
+            display: grid;
+            gap: pg(400);
+
+            @include mq(md){
+                grid-template-columns: 1fr minmax(200px, 400px);
+                gap: pg(800);
+            }
+        }
+
+        .content {
+            display: grid;
+            gap: pg(200);
+        }
+
+        .title {
+            font-weight: bold;
+        }
+
+        .img1 {
+            background: url("../../pics/safty_1.jpg");
+        }
+        .img2 {
+            background: url("../../pics/safty_2.jpg");
+        }
+        .img {
+            background-size: cover;
+            min-height: 200px;
+        }
+    }
+}

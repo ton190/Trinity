@@ -1,0 +1,29 @@
+@use '../../basic/' as *;
+@use '../page_base';
+
+.Waterproofing {
+    display: grid;
+    .page_head {
+        background: url("../../../pics/services_head_1.jpg");
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
+    }
+
+    .list {
+        display: grid;
+        @include mq(sm) {
+            grid-template-columns: 1fr 1fr;
+        }
+    }
+
+    ul {
+        padding: 0;
+        padding-left: 1em;
+        margin: 0;
+
+        li {
+            padding: 0.3em 0;
+        }
+    }
+}

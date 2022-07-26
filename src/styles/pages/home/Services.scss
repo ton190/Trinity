@@ -1,0 +1,50 @@
+@use '../../basic/' as *;
+
+.Services{
+    display: grid;
+    grid-template-rows: min-content 1fr;
+    gap: pg(600);
+    .container
+    {
+        width: 100%;
+        gap: pg(400);
+        display: grid;
+        a{
+            aspect-ratio: 2 / 1;
+            display: grid;
+            color: clr(primary, bg-100);
+            align-items: end;
+            cursor: pointer;
+            background-size: 100%;
+            transition: background-size 1s ease, filter 1s ease;
+            &:hover{
+                filter: sepia(100%);
+                background-size: 120%;
+            }
+            div{
+                background: clr(primary, shading-100);
+                padding: pg(100);
+                text-shadow: 0px 0px 10px clr(primary, shadow-0);
+            }
+
+            background-position: center;
+            background-repeat: no-repeat;
+            &.service_1{
+                background-image: url('../../../pics/home_service_1.jpg');
+            }
+            &.service_2{
+                background-image: url('../../../pics/home_service_2.jpg');
+            }
+            &.service_3{
+                background-image: url('../../../pics/home_service_3.jpg');
+            }
+            &.service_4{
+                background-image: url('../../../pics/home_service_4.jpg');
+            }
+        }
+        @include mq(md){
+            grid-template-columns: 1fr 1fr;
+        }
+    }
+}
+

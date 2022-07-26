@@ -1,0 +1,12 @@
+@use '../../basic/' as *;
+@use 'projects_base';
+
+.Birchmount {
+    display: grid;
+    background: url("../../../pics/birchmount.jpg");
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center;
+    background-size: cover;
+}
+

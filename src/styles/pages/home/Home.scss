@@ -1,0 +1,36 @@
+@use '../../basic/' as *;
+
+.Home{
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    font-size: fs(200);
+}
+
+.separator{
+    height: 100px;
+}
+
+section{
+    padding: pg(400) pg(200);
+    display: grid;
+    gap: pg(400);
+    background: clr(primary, bg-100);
+    @include mq(sm){
+        padding: pg(600) pg(200);
+    }
+}
+
+.background-video {
+  width: 100vw;
+  height: 100vh;
+  object-fit: cover;
+  object-position: center;
+  position: fixed;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  z-index: -1;
+}

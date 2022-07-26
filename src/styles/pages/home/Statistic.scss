@@ -1,0 +1,36 @@
+@use '../../basic' as *;
+
+.Statistic{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: pg(600);
+    // justify-items: center;
+    justify-content: center;
+
+    .container{
+        // max-width: 300px;
+        display: flex;
+        flex-basis: 800px;
+        flex-shrink: 200px;
+        gap: pg(200);
+        flex-direction: column;
+        justify-content: center;
+
+        @include mq(sm){
+            flex-basis: 300px;
+        }
+
+        background: clr(primary, bg-200);
+        box-shadow: clr(primary, shadow-200) 0px 0px 10px 1px;
+        border-radius: 25px;
+        padding: pg(400);
+        div{
+            text-align: center;
+            font-weight: bold;
+        }
+        div:first-of-type{
+            font-size: 2em;;
+        }
+    }
+}

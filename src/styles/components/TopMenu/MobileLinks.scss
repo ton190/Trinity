@@ -1,0 +1,63 @@
+@use '../../basic' as *;
+@use 'links.scss';
+
+.MobileLinks{
+    z-index: 2;
+    position: fixed;
+    overflow-y: auto;
+    inset: 0;
+    top: 100px;
+    display: none;
+    background: clr(btn, bg-100);
+    opacity: 0;
+
+    nav{
+        display: flex;
+        opacity: 1;
+        flex-direction: column;
+        opacity: 0;
+
+        .link, a{
+
+        font-size: fs(200);
+            padding: pg(50) pg(200);
+        }
+    }
+
+    .submenu{
+        display: flex;
+        flex-direction: column;
+        a{
+            padding-left: pg(500);
+            padding-right: 0;
+        }
+    }
+    &.open{
+        display: grid;
+        animation: b_open 150ms forwards ease;
+        nav{
+            animation: b_open 150ms 150ms forwards ease;
+        }
+        @include mq(md){display: none;}
+    }
+    &.closing{
+        display: grid;
+        opacity: 1;
+            animation: b_close 150ms 150ms forwards ease;
+        nav{
+            opacity: 1;
+            animation: b_close 150ms forwards ease;
+        }
+        @include mq(md){display: none;}
+    }
+
+    @keyframes b_open{
+        from{opacity: 0;}
+        to{opacity: 1;}
+    }
+    @keyframes b_close{
+        from{opacity: 1;}
+        to{opacity: 0;}
+    }
+
+}

@@ -1,0 +1,23 @@
+$colors: (
+  primary: (
+    bg-100: hsla(0, 0%, 100%),
+    bg-200: hsla(0, 0%, 95%),
+    fg-100: hsla(0, 0%, 0%),
+    error-100: hsla(0, 100%, 50%),
+    success-100: green,
+    shadow-0: hsla(0, 0%, 0%, 0.5),
+    shadow-100: hsla(0, 0%, 0%, 0.5),
+    shadow-200: hsla(0, 0%, 20%, 0.5),
+    shading-100: hsla(0, 0%, 0%, 0.7),
+  ),
+  btn: (
+    bg-100: hsla(0, 0%, 90%),
+    bg-200: hsla(0, 0%, 20%),
+    fg-100: hsla(0, 0%, 100%),
+  ),
+  btn-form: (
+    bg-100: hsla(0, 0%, 35%),
+    bg-200: hsla(0, 0%, 15%),
+    fg-100: hsla(0, 0%, 100%),
+  ),
+);

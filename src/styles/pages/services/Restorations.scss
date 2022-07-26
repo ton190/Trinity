@@ -1,0 +1,13 @@
+@use '../../basic/' as *;
+@use '../page_base';
+
+.Restorations{
+    display: grid;
+    .page_head {
+        background: url("../../../pics/services_head_2.jpg");
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
+    }
+}
+

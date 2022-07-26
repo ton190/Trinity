@@ -1,0 +1,53 @@
+@use '../../basic/' as *;
+
+.TopMenu{
+    z-index: 3;
+    height: 100px;
+    position: absolute;
+    inset: 0;
+    bottom: initial;
+    background: clr(primary, bg-100);
+    display: flex;
+    justify-content: space-between;
+    text-transform: uppercase;
+    padding: 0 pg(100);
+    align-items: center;
+
+    @include mq(md){
+    justify-content: center;
+        height: 150px;
+        flex-direction: column;
+        gap: pg(200);
+    }
+
+    @include mq(lg){
+        justify-content: space-between;
+        flex-direction: row;
+        height: 100px;
+    }
+
+    &:after{
+        content:"";
+    background: gray;
+    display: block;
+    height:1px;
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: -1px;
+    }
+
+    .logo{
+        font-family: 'Montserrat', sans-serif;
+        font-size: fs(300);
+        text-align: center;
+        font-weight: 600;
+        max-width: 220px;
+        @include mq(md){
+            max-width: initial;
+        }
+        @include mq(lg){
+            max-width: 220px;
+        }
+    }
+}

@@ -1,0 +1,32 @@
+@use '../../basic/' as *;
+@use 'links';
+
+.Links {
+    display: none;
+    @include mq(md) {
+        display: block;
+    }
+    @keyframes a_open {
+        from {
+            opacity: 0;
+            opacity: 1;
+        }
+    }
+    .container .submenu {
+        position: absolute;
+        flex-direction: column;
+        display: none;
+        // animation: a_open 300ms ease;
+    }
+
+    .container:hover {
+        .link {
+            background: clr(btn, bg-200);
+            color: clr(btn, fg-100);
+        }
+        .submenu {
+            z-index: 3;
+            display: flex;
+        }
+    }
+}

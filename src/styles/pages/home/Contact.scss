@@ -1,0 +1,113 @@
+@use "../../basic/" as *;
+
+.Contact {
+  center {
+    padding: pg(400) 0;
+  }
+  .map_container {
+    position: relative;
+    display: grid;
+  }
+  .map {
+    position: relative;
+    max-width: 1000px;
+    padding-bottom: 400px;
+    height: 200px;
+    iframe {
+      left: 0;
+      top: 0;
+      height: 100%;
+      width: 100%;
+      position: absolute;
+    }
+  }
+  .container {
+    justify-self: center;
+    max-width: 1000px;
+    width: 100%;
+    display: grid;
+    gap: pg(600);
+    @include mq(md) {
+      grid-template-columns: 1fr 1fr;
+    }
+    .form {
+      display: grid;
+      gap: pg(100);
+    }
+    .title {
+      font-weight: bold;
+    }
+    .field-group {
+      display: grid;
+    }
+
+    .error_message {
+      font-size: fs(100);
+      padding-top: pg(50);
+      color: clr(primary, error-100);
+      margin-bottom: -0.3em;
+    }
+  }
+  form {
+    display: grid;
+    gap: pg(200);
+
+    input,
+    textarea {
+      padding: pg(50) pg(200);
+      font-size: fs(200);
+      outline: none;
+      border: none;
+      transition: box-shadow 0.3s ease;
+      box-shadow: clr(primary, shadow-100) 0px 0px 2px 1px;
+
+      &:focus {
+        box-shadow: clr(primary, shadow-100) 0px 0px 5px 2px;
+      }
+    }
+    textarea {
+      height: 8em;
+    }
+    button {
+      padding: pg(200);
+      background: clr(btn-form, bg-100);
+      color: clr(btn-form, fg-100);
+      border: none;
+      cursor: pointer;
+      outline: none;
+      transition: background 0.3s ease;
+
+      &:hover {
+        background: clr(btn-form, bg-100);
+      }
+    }
+    div.success {
+      color: clr(primary, success-100);
+    }
+    div.error {
+      color: clr(primary, error-100);
+    }
+    button.success {
+      background: clr(primary, success-100);
+    }
+    button.error {
+      background: clr(primary, error-100);
+    }
+  }
+
+  .info {
+    gap: pg(400);
+    display: grid;
+    align-content: start;
+
+    > div {
+      display: grid;
+      gap: pg(50);
+    }
+
+    @include mq(md) {
+      align-items: center;
+      // align-content: space-between;
+    }
+  }
+}

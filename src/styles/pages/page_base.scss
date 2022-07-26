@@ -1,0 +1,23 @@
+@use '../basic/' as *;
+
+.page_head{
+        height: 25vh;
+}
+
+.page_body{
+    justify-self: center;
+    max-width: 800px;
+    display: grid;
+    gap: pg(600);
+    padding: pg(600) pg(200);
+    font-size: fs(200);
+}
+
+.page_content{
+    display: grid;
+    gap: pg(100);
+
+    .title{
+        font-weight: bold;
+    }
+}

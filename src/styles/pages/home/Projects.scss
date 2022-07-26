@@ -1,0 +1,49 @@
+@use '../../basic/' as *;
+
+.Projects{
+    display: grid;
+    grid-template-rows: min-content 1fr;
+    gap: pg(600);
+    .container
+    {
+        width: 100%;
+        gap: pg(400);
+        display: grid;
+        a{
+            aspect-ratio: 2 / 1;
+            display: grid;
+            color: clr(primary, bg-100);
+            align-items: end;
+            cursor: pointer;
+            background-size: 100%;
+            transition: background-size 1s ease, filter 1s ease;
+            &:hover{
+                filter: sepia(100%);
+                background-size: 120%;
+            }
+            div{
+                background: clr(primary, shading-100);
+                padding: pg(100);
+                text-shadow: 0px 0px 10px clr(primary, shadow-0);
+            }
+
+            background-position: center;
+            background-repeat: no-repeat;
+            &.project_1{
+                background-image: url('../../../pics/project_1.jpg');
+            }
+            &.project_2{
+                background-image: url('../../../pics/project_2.jpg');
+            }
+            &.project_3{
+                background-image: url('../../../pics/project_3.jpg');
+            }
+            &.project_4{
+                background-image: url('../../../pics/project_4.jpg');
+            }
+        }
+        @include mq(md){
+            grid-template-columns: 1fr 1fr;
+        }
+    }
+}

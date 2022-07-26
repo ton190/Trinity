@@ -1,0 +1,12 @@
+@use '../../basic/' as *;
+@use 'projects_base';
+
+.Falstaff {
+    display: grid;
+    background: url("../../../pics/falstaff.jpg");
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+}
+
+

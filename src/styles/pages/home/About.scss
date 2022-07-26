@@ -1,0 +1,13 @@
+@use '../../basic/' as *;
+
+.About{
+    display: grid;
+    justify-content: center;
+    p{
+        max-width: 800px;
+        padding: pg(100);
+        margin: 0;
+        font-size: 1.2em;
+    }
+}
+

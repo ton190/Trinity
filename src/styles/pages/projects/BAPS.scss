@@ -1,0 +1,11 @@
+@use '../../basic/' as *;
+@use 'projects_base';
+
+.BAPS {
+    display: grid;
+    background: url("../../../pics/baps.jpg");
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center;
+    background-size: cover;
+}

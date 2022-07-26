@@ -1,0 +1,98 @@
+@use '../../basic/' as *;
+@use '../page_base';
+
+.Roofing {
+    display: grid;
+
+    .page_body {
+        max-width: initial;
+    }
+    .page_head {
+        background: url("../../../pics/services_head_3.jpg");
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
+    }
+
+    .options {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: top;
+        gap: pg(600);
+
+        .container {
+            box-shadow: clr(primary, shadow-200) 0px 0px 10px 1px;
+            border-radius: 25px;
+            padding: pg(400);
+
+            flex-shrink: 300px;
+            display: grid;
+            gap: pg(200);
+            align-items: start;
+            align-content: start;
+
+            @include mq(sm) {
+                flex-basis: 300px;
+            }
+        }
+        .box_top {
+            display: grid;
+            gap: pg(50);
+            justify-items: center;
+        }
+        .title {
+            font-weight: bold;
+        }
+    }
+    .list_container {
+        padding-top: pg(400);
+        justify-self: center;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: pg(600);
+
+          div:not(.title) {
+            flex-shrink: 300px;
+            flex-basis: 600px;
+            width: 300px;
+            height: 300px;
+            background-size: cover;
+            position: relative;
+            @include mq(sm){
+                flex-basis: initial;
+            }
+        }
+
+        .title{
+            position: absolute;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: clr(primary, shading-100);
+            text-shadow: 0px 0px 10px clr(primary, shadow-0);
+            color: clr(primary, bg-100);
+            padding: pg(100);
+        }
+
+        .box1 {
+            background: url("../../../pics/roofing_1.jpg");
+        }
+        .box2 {
+            background: url("../../../pics/roofing_2.jpg");
+        }
+        .box3 {
+            background: url("../../../pics/roofing_3.jpg");
+        }
+        .box4 {
+            background: url("../../../pics/roofing_4.jpg");
+        }
+        .box5 {
+            background: url("../../../pics/roofing_5.jpg");
+        }
+        .box6 {
+            background: url("../../../pics/roofing_6.jpg");
+        }
+    }
+}

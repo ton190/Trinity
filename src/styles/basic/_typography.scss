@@ -1,0 +1,88 @@
+@import 'mixins';
+@import 'colors';
+
+$font-base: 1rem;
+$padding-base: 1rem;
+$scale-font: 1.333;
+$scale-padding: 1.333;
+$media-scale: 1.02;
+
+$breakpoints: (
+    sm: 700px,
+    md: 850px,
+    lg: 1100px,
+);
+
+
+@import url(
+    'https://fonts.googleapis.com/css2?family=Roboto:ital,' +
+    'wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+@import url(
+    'https://fonts.googleapis.com/css?family=Material+Icons|Material+Icons+Outlined|Material+Icons+Two+Tone|Material+Icons+Round|Material+Icons+Sharp');
+
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap');
+*{
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+    @include base-root;
+}
+:root{
+    margin: 0;
+    padding: 0;
+    -webkit-tap-highlight-color: transparent;
+    -webkit-text-size-adjust: none;
+    -moz-text-size-adjust: none;
+    -ms-text-size-adjust: none;
+    font-size: fs(200);
+}
+html * {
+    max-height:1000000px;
+}
+body{
+    padding: 0;
+    margin: 0;
+}
+
+main{
+    min-height: calc(100% - 40px);
+}
+button, textarea, input, a{
+    outline: none;
+}
+
+footer{
+    background: hsla(0, 0%, 15%);
+    color: white;
+    padding: pg(100) pg(600);
+    height: 40px;
+    font-size: .8rem;
+}
+
+.Page{
+    position: absolute;
+    inset: 0;
+    top: 100px;
+    overflow: auto;
+    @include mq(md){
+        top: 150px;
+    }
+    @include mq(lg){
+        top: 100px;
+    }
+}
+
+.section_title{
+    width: fit-content;
+    justify-self: center;
+    font-size: 1.8em;
+    // padding: pg(200) 0;
+    font-weight: bold;
+    text-align: center;
+    &:after{
+        content: '';
+        display: block;
+        background: hsla(200, 50%, 50%);
+        height: 5px;
+    }
+}
+

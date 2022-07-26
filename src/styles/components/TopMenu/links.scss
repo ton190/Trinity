@@ -1,0 +1,20 @@
+@use '../../basic/' as *;
+nav{
+    display: flex;
+    .link, a{
+        white-space: nowrap;
+        font-size: fs(100);
+        color: initial;
+        text-decoration: none;
+        font-weight: 500;
+        transition: background .2s, color .2s;
+        padding: pg(300);
+        cursor: pointer;
+        background: clr(btn, bg-100);
+        &:hover, &.active{
+            background: clr(btn, bg-200);
+            color: clr(btn, fg-100);
+        }
+    }
+}
+
