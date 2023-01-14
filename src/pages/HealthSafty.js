@@ -16,7 +16,7 @@ export default function HealthSafty() {
         <div className="HealthSafty">
           <div className="page_head" />
           <div className="page_body">
-            <div className="section_title">OCUPATIONAL HEALTH AND SAFTY</div>
+            <div className="section_title">OCUPATIONAL HEALTH AND SAFETY</div>
             <div className="container">
               <div className="box">
                 <div className="content">
