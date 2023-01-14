@@ -86,7 +86,7 @@ export default function Links({ section, goToSection, mobile }) {
       >
         Contact
       </div>
-      <NavLink to="/health_safty">Health & Safty</NavLink>
+      <NavLink to="/health_safty">Health & Safety</NavLink>
       <NavLink to="/emergency">Emergency Roof Repair</NavLink>
     </nav>
   );
